@@ -21,11 +21,11 @@
       </div>
       <div class="flex flex-col mt-28">
         <h1 class="text-4xl font-black text-white">
-          Get a feedback easily. <br />
+          Get and manage feedbacks easily. <br />
           And made your customers <br class="hidden lg:inline-block" />
           happy.
         </h1>
-        <p class="text-lg text-white font-medium">
+        <p class="text-lg mt-4 text-white font-medium">
           Receive ideas, feedbacks, sugestions and claims with<br
             class="hidden lg:inline-block"
           />
@@ -33,7 +33,7 @@
         </p>
         <div>
           <button
-            class="px-10 py-2 mt-10 font-bold bg-white rounded-sm text-brand-graydark focus:outline-none hover:bg-brand-graydark border border-white hover:text-white transition duration-200"
+            class="px-10 py-2 mt-10 font-bold bg-brand-danger rounded-sm text-white focus:outline-none hover:bg-brand-graydark border border-brand-danger hover:border-white hover:text-white transition duration-200"
           >
             Get started
           </button>
@@ -57,11 +57,11 @@ export default {}
   @apply flex flex-col w-4/5 max-w-6xl;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1140px) {
   .header-group {
     background-image: url(../../assets/images/landing.svg);
     background-size: 558px;
-    background-position: 90% 60%;
+    background-position: 100% 60%;
     background-repeat: no-repeat;
   }
 }

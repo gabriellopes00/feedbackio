@@ -5,7 +5,7 @@ module.exports = {
     info: '#5AC1A7',
     graydark: '#7E8D85',
     warning: '#E4B52E',
-    danger: '##EC5F83'
+    danger: '#EC5F83'
   },
   mediumslateblue: {
     50: '#f6f9fd',

@@ -5,12 +5,12 @@
         Any question ?
       </h1>
       <p class="text-lg text-center text-gray-800 font-regular">
-        Do you want to know witch are the prices ?
+        Would you like to know more about prices?
       </p>
       <div class="mt-10">
         <a
           href="mailto:gabrielluislopes00@gmail.com"
-          class="px-6 py-2 mt-10 font-bold text-white rounded-sm bg-brand-main focus:outline-none"
+          class="px-16 py-4 font-bold bg-brand-main rounded-sm text-white focus:outline-none hover:bg-white border border-brand-main hover:text-brand-main transition duration-200"
         >
           Send an email
         </a>
