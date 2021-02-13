@@ -8,12 +8,12 @@
 
         <div class="flex">
           <button
-            class="px-6 py-2 font-bold text-white rounded-sm focus:outline-none"
+            class="px-6 py-2 mx-2 font-bold text-white rounded-sm border border-white focus:outline-none hover:bg-white hover:text-brand-graydark transition duration-200"
           >
             Log In
           </button>
           <button
-            class="px-6 py-2 font-bold bg-white rounded-sm text-brand-main focus:outline-none"
+            class="px-6 py-2 font-bold bg-white rounded-sm text-brand-graydark focus:outline-none hover:bg-brand-graydark border border-white hover:text-white transition duration-200"
           >
             Create an account
           </button>
@@ -33,7 +33,7 @@
         </p>
         <div>
           <button
-            class="mt-10 px-6 py-2 font-bold bg-white rounded-sm text-brand-main focus:outline-none"
+            class="px-10 py-2 mt-10 font-bold bg-white rounded-sm text-brand-graydark focus:outline-none hover:bg-brand-graydark border border-white hover:text-white transition duration-200"
           >
             Get started
           </button>
@@ -50,7 +50,7 @@ export default {}
 <style lang="postcss" scoped>
 .header {
   height: 700px;
-  @apply bg-brand-main w-full flex justify-center;
+  @apply bg-brand-graydark w-full flex justify-center;
 }
 
 .header-group {

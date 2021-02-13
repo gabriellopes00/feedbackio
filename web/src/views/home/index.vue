@@ -5,8 +5,10 @@
       @login="handleLogin()"
     />
     <contact />
-    <div class="flex justify-center py-10 bg-brand-gray">
-      <p class="font-medium text-center text-gray-800">Feedfier &copy; 2021</p>
+    <div class="flex justify-center py-10 bg-brand-graydark">
+      <p class="font-medium text-center text-white text-lg">
+        Feedfier &copy; 2021
+      </p>
     </div>
   </div>
 </template>
