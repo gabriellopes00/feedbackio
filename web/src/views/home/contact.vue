@@ -4,7 +4,7 @@
       <h1 class="text-4xl font-black text-center text-gray-800">
         Any question ?
       </h1>
-      <p class="text-lg text-center text-gray-800 font-regular">
+      <p class="text-lg mt-4 text-center text-gray-800 font-regular">
         Would you like to know more about prices?
       </p>
       <div class="mt-10">

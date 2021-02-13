@@ -1,15 +1,12 @@
 <template>
   <div class="w-full h-full">
-    <custom-header
+    <CustomHeader
       @create-account="handleCreateAccount()"
       @login="handleLogin()"
     />
-    <contact />
-    <div class="flex justify-center py-10 bg-brand-graydark">
-      <p class="font-medium text-center text-white text-lg">
-        Feedfier &copy; 2021 | Gabriel Lopes &copy; 2021
-      </p>
-    </div>
+
+    <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -19,9 +16,10 @@ import { useRouter } from 'vue-router'
 
 import CustomHeader from './custom-header'
 import Contact from './contact'
+import Footer from './footer'
 
 export default {
-  components: { CustomHeader, Contact },
+  components: { CustomHeader, Contact, Footer },
   setup() {
     const router = useRouter()
 

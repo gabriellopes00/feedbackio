@@ -8,12 +8,12 @@
 
         <div class="flex">
           <button
-            class="px-6 py-2 mx-2 font-bold text-white rounded-sm border border-white focus:outline-none hover:bg-white hover:text-brand-graydark transition duration-200"
+            class="px-6 py-2 mx-2 font-bold bg-brand-danger rounded-sm text-white focus:outline-none hover:bg-brand-graydark border border-brand-danger hover:border-white hover:text-white transition duration-200"
           >
             Log In
           </button>
           <button
-            class="px-6 py-2 font-bold bg-white rounded-sm text-brand-graydark focus:outline-none hover:bg-brand-graydark border border-white hover:text-white transition duration-200"
+            class="py-2 px-6 font-bold bg-white rounded-sm text-brand-graydark focus:outline-none hover:bg-brand-graydark border border-white hover:text-white transition duration-200"
           >
             Create an account
           </button>
