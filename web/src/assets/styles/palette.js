@@ -1,11 +1,17 @@
 module.exports = {
   brand: {
-    main: '#3C493F',
-    gray: '#B3BFB8',
-    info: '#5AC1A7',
-    graydark: '#7E8D85',
     warning: '#E4B52E',
-    danger: '#EC5F83'
+    danger: '#E63946',
+
+    darker: '#212529',
+    dark: '#343A40',
+    medium_darker: '#495057',
+    medium_dark: '#6C757D',
+    medium: '#ADB5BD',
+    medium_light: '#CED4DA',
+    medium_extra_light: '#DEE2E6',
+    light: '#E9ECEF',
+    extra_light: '#F8F9FA'
   },
   mediumslateblue: {
     50: '#f6f9fd',

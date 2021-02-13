@@ -1,34 +1,35 @@
 <template>
-  <header class="header">
+  <header class="w-full h-full flex justify-center bg-brand-light">
     <div class="header-group">
-      <div class="flex items-center justify-between py-10">
+      <div class="py-10 flex items-center justify-between">
         <div class="w-28 lg:w-36">
           <div class="flex">
-            <h1 class="text-white font-black text-4xl mr-4">Feedfier</h1>
+            <h1 class="mr-4 text-brand-darker text-4xl font-black">Feedfier</h1>
             <img class="w-10" src="../../assets/images/logo.svg" alt="logo" />
           </div>
         </div>
 
         <div class="flex">
           <button
-            class="px-6 py-2 mx-2 font-bold bg-brand-danger rounded-sm text-white focus:outline-none hover:bg-brand-graydark border border-brand-danger hover:border-white hover:text-white transition duration-200"
+            class="px-6 py-2 mx-2 font-medium bg-brand-danger rounded-sm text-brand-extra_light focus:outline-none hover:bg-transparent border border-brand-danger hover:border-brand-darker hover:text-brand-darker transition duration-200 shadow-md"
           >
             Log In
           </button>
           <button
-            class="py-2 px-6 font-bold bg-white rounded-sm text-brand-graydark focus:outline-none hover:bg-brand-graydark border border-white hover:text-white transition duration-200"
+            class="px-6 py-2 mx-2 font-medium bg-brand-darker rounded-sm text-brand-extra_light focus:outline-none hover:bg-transparent border border-brand-darker hover:border-brand-darker hover:text-brand-darker transition duration-200 shadow-md"
           >
-            Create an account
+            Create an Account
           </button>
         </div>
       </div>
+
       <div class="flex flex-col mt-28">
-        <h1 class="text-4xl font-black text-white">
+        <h1 class="text-4xl font-black text-brand-darker">
           Get and manage feedbacks easily. <br />
-          And made your customers <br class="hidden lg:inline-block" />
-          happy.
+          And have a better control <br class="hidden lg:inline-block" />
+          over your services.
         </h1>
-        <p class="text-lg mt-4 text-white font-medium">
+        <p class="text-lg mt-4 text-brand-dark font-medium">
           Receive ideas, feedbacks, sugestions and claims with<br
             class="hidden lg:inline-block"
           />
@@ -36,9 +37,9 @@
         </p>
         <div>
           <button
-            class="px-10 py-2 mt-10 font-bold bg-brand-danger rounded-sm text-white focus:outline-none hover:bg-brand-graydark border border-brand-danger hover:border-white hover:text-white transition duration-200"
+            class="px-10 py-2 mt-4 font-medium bg-brand-danger rounded-sm text-brand-extra_light focus:outline-none hover:bg-transparent border border-brand-danger hover:border-brand-darker hover:text-brand-darker transition duration-200 shadow-md"
           >
-            Get started
+            Get Started
           </button>
         </div>
       </div>
@@ -51,11 +52,6 @@ export default {}
 </script>
 
 <style lang="postcss" scoped>
-.header {
-  height: 700px;
-  @apply bg-brand-graydark w-full flex justify-center;
-}
-
 .header-group {
   @apply flex flex-col w-4/5 max-w-6xl;
 }
@@ -63,8 +59,8 @@ export default {}
 @media (min-width: 1140px) {
   .header-group {
     background-image: url(../../assets/images/landing.svg);
-    background-size: 558px;
-    background-position: 100% 60%;
+    background-size: 458px;
+    background-position: 100% 75%;
     background-repeat: no-repeat;
   }
 }
