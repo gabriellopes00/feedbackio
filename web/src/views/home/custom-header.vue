@@ -3,7 +3,10 @@
     <div class="header-group">
       <div class="flex items-center justify-between py-10">
         <div class="w-28 lg:w-36">
-          <h1 class="text-white font-black text-4xl">Feedfier</h1>
+          <div class="flex">
+            <h1 class="text-white font-black text-4xl mr-4">Feedfier</h1>
+            <img class="w-10" src="../../assets/images/logo.svg" alt="logo" />
+          </div>
         </div>
 
         <div class="flex">
