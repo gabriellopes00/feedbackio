@@ -11,11 +11,13 @@
 
         <div class="flex">
           <button
+            @click="() => emit('login')"
             class="px-6 py-2 mx-2 font-medium bg-brand-danger rounded-sm text-brand-extra_light focus:outline-none hover:bg-transparent border border-brand-danger hover:border-brand-darker hover:text-brand-darker transition duration-200 shadow-md"
           >
             Log In
           </button>
           <button
+            @click="() => emit('create-account')"
             class="px-6 py-2 mx-2 font-medium bg-brand-darker rounded-sm text-brand-extra_light focus:outline-none hover:bg-transparent border border-brand-darker hover:border-brand-darker hover:text-brand-darker transition duration-200 shadow-md"
           >
             Create an Account
@@ -48,7 +50,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  setup(_, { emit }) {
+    return { emit }
+  }
+}
 </script>
 
 <style lang="postcss" scoped>
