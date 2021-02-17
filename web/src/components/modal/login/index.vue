@@ -44,10 +44,7 @@
           >
         </label>
         <button
-          :class="{
-            'opacity-50 hover:bg-brand-danger hover:border-brand-danger':
-              state.isLoading
-          }"
+          :class="{ 'opacity-50 hover:bg-brand-danger': state.isLoading }"
           :disabled="state.isLoading"
           class="w-full py-3 mt-6 text-xl font-medium bg-brand-danger rounded-sm text-brand-extra_light focus:outline-none hover:bg-transparent border border-brand-danger hover:border-brand-darker hover:text-brand-darker transition duration-200 shadow-md"
         >
@@ -68,6 +65,7 @@ import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { useField } from 'vee-validate'
 import { useToast } from 'vue-toastification'
+
 import { useModal } from '../../../hooks/use-modal'
 import { passwordValidation, emailValidation } from '../../../utils/validations'
 import services from '../../../services/'
@@ -101,6 +99,7 @@ export default {
         errorMessage: passwordErrorMessage
       }
     })
+
     const handleSubmit = async () => {
       try {
         state.isLoading = true
@@ -112,6 +111,7 @@ export default {
         if (!errors) {
           toast.clear()
           localStorage.setItem('token', data.token)
+          toast.success('Logged sucessfully')
           router.push({ name: 'Feedbacks' })
           modal.close()
           return
