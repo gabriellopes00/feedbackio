@@ -44,11 +44,19 @@
           >
         </label>
         <button
-          :class="{ 'opacity-50': state.isLoading }"
+          :class="{
+            'opacity-50 hover:bg-brand-danger hover:border-brand-danger':
+              state.isLoading
+          }"
           :disabled="state.isLoading"
           class="w-full py-3 mt-6 text-xl font-medium bg-brand-danger rounded-sm text-brand-extra_light focus:outline-none hover:bg-transparent border border-brand-danger hover:border-brand-darker hover:text-brand-darker transition duration-200 shadow-md"
         >
-          Log In
+          <icon
+            v-if="state.isLoading"
+            name="loading"
+            class="animate-spin mx-auto"
+          />
+          <span v-else>Log In</span>
         </button>
       </form>
     </div>
@@ -63,8 +71,10 @@ import { useToast } from 'vue-toastification'
 import { useModal } from '../../../hooks/use-modal'
 import { passwordValidation, emailValidation } from '../../../utils/validations'
 import services from '../../../services/'
+import icon from '../../icon/'
 
 export default {
+  components: { icon },
   setup() {
     const toast = useToast()
     const router = useRouter()
@@ -109,7 +119,8 @@ export default {
         if (errors.status === 400) toast.error('Something went wrong')
         if (errors.status === 404) toast.error('Email not found')
         if (errors.status === 401) toast.error('Unautorized')
-        if (errors.status === 500) state.isLoading = false
+        state.isLoading = false
+        modal.close()
       } catch (error) {
         state.isLoading = false
         state.hasErrors = !!error
