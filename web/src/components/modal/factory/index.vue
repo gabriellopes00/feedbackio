@@ -9,7 +9,7 @@
         <div
           class="flex flex-col overflow-hidden bg-brand-light rounded-lg animate__animated animate__fadeIn animate__faster"
         >
-          <div class="flex flex-col px-12 py-10 bg-brand-light">
+          <div class="flex flex-col px-8 py-6 bg-brand-light">
             <component :is="state.component" />
           </div>
         </div>
