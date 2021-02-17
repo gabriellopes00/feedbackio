@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken')
 
-function CreateAuthHandler (db) {
-  async function login (ctx) {
+function CreateAuthHandler(db) {
+  async function login(ctx) {
     const { email, password } = ctx.request.body
     const user = await db.readOneByEmail('users', email)
 
@@ -11,10 +11,7 @@ function CreateAuthHandler (db) {
       return
     }
 
-    const canLogin = () => (
-      user.email === email &&
-      user.password === password
-    )
+    const canLogin = () => user.email === email && user.password === password
 
     if (!canLogin()) {
       ctx.status = 401
@@ -22,11 +19,14 @@ function CreateAuthHandler (db) {
       return
     }
 
-    const token = jwt.sign({
-      id: user.id,
-      email: user.email,
-      name: user.name
-    }, process.env.JWT_SECRET)
+    const token = jwt.sign(
+      {
+        id: user.id,
+        email: user.email,
+        name: user.name
+      },
+      'asdf'
+    )
 
     ctx.status = 200
     ctx.body = { token }

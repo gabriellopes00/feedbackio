@@ -57,12 +57,19 @@
 
 <script>
 import { reactive } from 'vue'
+import { useRouter } from 'vue-router'
 import { useField } from 'vee-validate'
+import { useToast } from 'vue-toastification'
 import { useModal } from '../../../hooks/use-modal'
 import { passwordValidation, emailValidation } from '../../../utils/validations'
+import services from '../../../services/'
 
 export default {
   setup() {
+    const toast = useToast()
+    const router = useRouter()
+    const modal = useModal()
+
     const { value: emailValue, errorMessage: emailErrorMessage } = useField(
       'email',
       emailValidation
@@ -72,7 +79,6 @@ export default {
       errorMessage: passwordErrorMessage
     } = useField('password', passwordValidation)
 
-    const modal = useModal()
     const state = reactive({
       hasErrors: false,
       isLoading: false,
@@ -85,7 +91,32 @@ export default {
         errorMessage: passwordErrorMessage
       }
     })
-    const handleSubmit = () => {}
+    const handleSubmit = async () => {
+      try {
+        state.isLoading = true
+        const { data, errors } = await services.auth.login({
+          email: state.email.value,
+          password: state.password.value
+        })
+
+        if (!errors) {
+          toast.clear()
+          localStorage.setItem('token', data.token)
+          router.push({ name: 'Feedbacks' })
+          modal.close()
+          return
+        }
+        if (errors.status === 400) toast.error('Something went wrong')
+        if (errors.status === 404) toast.error('Email not found')
+        if (errors.status === 401) toast.error('Unautorized')
+        if (errors.status === 500) state.isLoading = false
+      } catch (error) {
+        state.isLoading = false
+        state.hasErrors = !!error
+        toast.error('Something went wrong inside the server')
+      }
+    }
+
     return { state, close: modal.close, handleSubmit }
   }
 }
