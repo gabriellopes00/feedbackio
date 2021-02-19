@@ -7,7 +7,7 @@
     >
       <div class="fixed mx-10" :class="state.width" @click.stop>
         <div
-          class="flex flex-col overflow-hidden bg-brand-light rounded-lg animate__animated animate__fadeIn animate__faster"
+          class="flex flex-col overflow-hidden bg-brand-light rounded-lg animate__animated animate__zoomIn animate__faster"
         >
           <div class="flex flex-col px-8 py-6 bg-brand-light">
             <component :is="state.component" />
