@@ -23,7 +23,7 @@ const routes = [
     name: 'Feedbacks',
     component: feedBacks,
     meta: {
-      hashAuth: true
+      hasAuth: true
     }
   },
   {
