@@ -12,3 +12,9 @@ export function emailValidation(email) {
   if (!isValid) return 'This field must be a valid email'
   return true
 }
+
+export function nameValidation(name) {
+  if (!name) return 'Name must be provided'
+  if (name.length < 3) return 'Minimum required name length is 4 characters'
+  return true
+}
