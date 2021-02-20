@@ -1,18 +1,19 @@
 import { reactive } from 'vue'
 
-const userState = reactive({
+const userInitialState = reactive({
   currentUser: {}
 })
 
-export default userState
+const state = reactive(userInitialState)
+export default state
 
 export const setCurrentUser = user => {
-  userState.currentUser = user
+  state.currentUser = user
 }
 
 export const setApiKey = apiKey => {
-  const currentUser = { ...userState.currentUser, apiKey }
-  userState.currentUser = currentUser
+  const currentUser = { ...state.currentUser, apiKey }
+  state.currentUser = currentUser
 }
 
-export const cleanCurrentUser = () => (userState.currentUser = {})
+export const cleanCurrentUser = () => (state.currentUser = {})

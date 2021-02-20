@@ -2,7 +2,7 @@ module.exports = {
   users: [
     {
       id: 'eab759f8-f238-4ff9-ae91-ee1558982329',
-      name: 'Igor Halfeld',
+      name: 'Gabriel Lopes',
       email: 'asdf@d.c',
       password: 'asdf',
       apiKey: ['fcd5015c-10d3-4e9c-b395-ec7ed8850165'],
