@@ -5,8 +5,8 @@
         Any question ?
       </h1>
       <p class="text-lg mt-4 text-center text-brand-dark font-regular">
-        Would you like to know more about prices and plans or how to use our
-        widget ?
+        Would you like to know more about the project and plans or how to use
+        our widget and api ?
       </p>
       <div class="mt-10">
         <a

@@ -4,7 +4,9 @@
       <div class="py-10 flex items-center justify-between flex-col md:flex-row">
         <div class="w-28 lg:w-36">
           <div class="flex justify-center">
-            <h1 class="mr-4 text-brand-darker text-4xl font-black">Feedfier</h1>
+            <h1 class="mr-4 text-brand-darker text-4xl font-black">
+              Feedback.<span class="text-brand-danger">i</span>o
+            </h1>
             <img class="w-10" src="../../assets/images/logo.svg" alt="logo" />
           </div>
         </div>
@@ -32,7 +34,7 @@
           over your services.
         </h1>
         <p class="text-lg mt-4 text-brand-dark font-medium">
-          Receive ideas, feedbacks, sugestions and claims with<br
+          Receive ideas, feedbacks, sugestions, claims and more with<br
             class="hidden lg:inline-block"
           />
           a simple widget on your website page.
@@ -41,7 +43,11 @@
           <button
             class="px-10 py-2 mt-4 font-medium bg-brand-danger rounded-sm text-brand-extra_light focus:outline-none hover:bg-transparent border border-brand-danger hover:border-brand-darker hover:text-brand-darker transition duration-200 shadow-md"
           >
-            Get Started
+            <a
+              target="blank"
+              href="https://github.com/gabriellopes00/feedbackio"
+              >Get Started</a
+            >
           </button>
         </div>
       </div>
